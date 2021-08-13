@@ -33,7 +33,7 @@ Hints:
 Consider use range(#begin, #end) method
 
 Solution:
-```python
+```python************
 l=[]
 for i in range(2000, 3201):
     if (i%7==0) and (i%5!=0):
@@ -48,13 +48,13 @@ Level 1
 Question:
 Write a program which can compute the factorial of a given numbers.
 The results should be printed in a comma-separated sequence on a single line.
-Suppose the following input is supplied to the program:
+Suppose the following input is to be supplied to the program:
 8
 Then, the output should be:
 40320
 
 Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
+In case input data is to be supplied to the question, it should be assumed that it is a console input.
 
 Solution:
 ```python
@@ -78,7 +78,7 @@ Then, the output should be:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
 Hints:
-In case of input data being supplied to the question, it should be assumed to be a console input.
+In case input data is to be supplied to the question, it should be assumed that it is a console input.
 Consider use dict()
 
 Solution:
@@ -851,11 +851,11 @@ def checkValue(n):
         print("It is an odd number")
         
 checkValue(7)
-
+```
 ### Question 33
 Define a function which can print a dictionary where the keys are numbers between 1 and 3 (both included) and the values are square of keys.
 
-Hints:
+#Hints:
 
 Use dict[key]=value pattern to put entry into a dictionary.
 Use ** operator to get power of a number.
@@ -1011,7 +1011,7 @@ def printList():
 	li=list()
 	for i in range(1,21):
 		li.append(i**2)
-	print li[5:]
+	print(li[5:]) 
 
 printList()
 ```
@@ -1082,9 +1082,9 @@ Solution
 ```python
 s= raw_input()
 if s=="yes" or s=="YES" or s=="Yes":
-    print "Yes"
+    print ("Yes")
 else:
-    print "No"
+    print ("No")
 ```
 ### Question 45
 Write a program which can filter even numbers in a list by using filter function. The list is: [1,2,3,4,5,6,7,8,9,10].
@@ -1212,7 +1212,7 @@ class Circle(object):
         return self.radius**2*3.14
 
 aCircle = Circle(2)
-print aCircle.area()
+print (aCircle.area())
 ```
 
 ### Question 53
@@ -1225,7 +1225,7 @@ Use def methodName(self) to define a method.
 Solution:
 ```python
 class Rectangle(object):
-    def __init__(self, l, w):
+    def _init_(self, l, w):
         self.length = l
         self.width  = w
 
@@ -1253,8 +1253,8 @@ class Shape(object):
         return 0
 
 class Square(Shape):
-    def __init__(self, l):
-        Shape.__init__(self)
+    def _init_(self, l):
+        Shape._init_(self)
         self.length = l
 
     def area(self):
@@ -1285,15 +1285,17 @@ Hints:
 Use try/except to catch exceptions.
 
 Solution:
+
 ```python
 def throws():
-    return 5/0
+    return 5 / 0
+
 
 try:
     throws()
 except ZeroDivisionError:
     print("division by zero!")
-except Exception, err:
+except Exception as err:
     print('Caught an exception')
 finally:
     print('In finally block for cleanup')
